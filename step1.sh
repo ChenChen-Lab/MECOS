@@ -1,0 +1,1 @@
+perl bin/reads_QC.pl  -F CTGTCTCTTATACACATCTTAGGAAGACAAGCACTGACGACATGA -R TCTGCTGAGTCGAGAACGTCTCTGTGAGCCAAGGAGTTGCTCTGG  -bl /datapool/bioinfo/guchaoyang/pipeline/stLFR/bin/barcode_list.txt  -sl test.list -host human -o  
