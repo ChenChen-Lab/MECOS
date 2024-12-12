@@ -40,7 +40,7 @@ sh step3.sh
 ```
 or
 ```{sh}
-
+perl bin/assembly_binning.pl -assembly_list  ./02.Assembly/assembly6.list  -o   
 ```
 
 ## Step4: Taxonomic classification on MAGs 
@@ -51,6 +51,15 @@ Output: classify/gtdbtk.bac120.summary.tsv
 ```{sh}
  sh step4.sh  
 ```
+or
+```{sh}
+cd 04.gtdbtk
+ls ../03.Binning/TR*/metabat2/bin_input/*.fa|grep -v '*' >bin.fa.list
+mkdir -p bin
+less bin.fa.list |awk '{print "cp "$0" ./bin"}' >cp.sh
+sh cp.sh
+sh gtdbtk.sh &
+```
 
 ## Step5: Antimicrobial resistance (AMR) genes analysis on MAGs
 Software：abricate  
@@ -60,6 +69,14 @@ Output: resfinder_new/summary.tab
 ```{sh}
  sh step5.sh  
 ```
+or
+```{sh}
+ls 04.gtdb/bin_contig/*.fa > 05.abricate/bin.list 
+perl bin/run_abricate.pl -abricate -sl ./05.abricate/bin.list -db resfinder_new -o 05.abricate
+cd 05.abricate/resfinder_new/
+sh summary.sh
+sed -i s'/\.fa//'g summary.tab 
+```
 
 ## Step6: Network analysis between bacterial taxonomy and AMR genes  
 Software：perl pipeline  
@@ -68,6 +85,12 @@ Input: 04.gtdb/classify/gtdbtk.bac120.summary.tsv; 05.abricate/resfinder_new/sum
 Output: combine_result.txt  
 ```{sh}
  sh step6.sh
+```
+or
+```{sh}
+less 04.gtdb/classify/gtdbtk.bac120.summary.tsv |cut -f 1,2 > 06.result/taxonomy.list
+less 05.abricate/resfinder_new/summary.tab |sed s'/#FILE/user_genome/'g >06.result/AMR_gene.list
+perl bin/my_join.pl -b 06.result/taxonomy.list -a 06.result/AMR_gene.list > 06.result/combine_result.txt
 ```
 
 ## Reference  
