@@ -24,6 +24,11 @@ Output: assembly.list
 ```{sh}
 sh step2.sh
 ```
+or
+```{sh}
+perl bin/reads_assembly4.pl -fl ./01.QC/fq.list -type metaspades_athena -o   -notrun
+```
+
 
 ## Step3: Perform binning of contigs to obtain Metagenome-Assembled Genomes (MAGs) and assess their quality.  
 Software：metabat2, bowtie2, samtools, checkm  
@@ -32,6 +37,10 @@ Input: 02.Assembly/assembly.list
 Output: 03.Binning/*/metabat2/*.fa  
 ```{sh}
 sh step3.sh  
+```
+or
+```{sh}
+
 ```
 
 ## Step4: Taxonomic classification on MAGs 
