@@ -23,13 +23,13 @@ Output: 03.Binning/*/metabat2/*.fa
 ## Step4: Taxonomic classification on MAGs 
 Software：gtdbtk-1.7.0  
 Directory: 04.gtdb  
-Input: bin_contig/*.fa (由03.Binning_new/*/metabat2/*.fa 整个cp过来)  
+Input: bin_contig/*.fa (cp 03.Binning_new/*/metabat2/*.fa )  
 Output: classify/gtdbtk.bac120.summary.tsv  
 
 ## Step5: Antimicrobial resistance (AMR) genes analysis on MAGs
 Software：abricate  
 Directory: 05.abricate  
-Input: bin.list (由04.gtdb/bin_contig/*.fa统计而来)  
+Input: bin.list (04.gtdb/bin_contig/*.fa)  
 Output: resfinder_new/summary.tab  
 
 ## Step6: Network analysis between bacterial taxonomy and AMR genes  
