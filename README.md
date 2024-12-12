@@ -1,4 +1,6 @@
-# Identifying Multidrug-Resistant Bacteria through Metagenomic Co-barcode Sequencing (MECOS) Analysis
+# Identifying Multidrug-Resistant Bacteria through Metagenomic Co-barcode Sequencing (MECOS) Analysis  
+
+##
   
 ## Step1: Processing of raw reads data: de-splice and de-host (human/mouse) -derived DNA 
 Software：SOAPfilter_v2.2, bowtie2  
