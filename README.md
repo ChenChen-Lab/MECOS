@@ -58,7 +58,7 @@ ls ../03.Binning/*/metabat2/bin_input/*.fa|grep -v '*' >bin.fa.list
 mkdir -p bin
 less bin.fa.list |awk '{print "cp "$0" ./bin"}' >cp.sh
 sh cp.sh
-sh gtdbtk.sh &
+sh bin/gtdbtk.sh &
 ```
 
 ## Step5: Antimicrobial resistance (AMR) genes analysis on MAGs
@@ -74,7 +74,7 @@ or
 ls 04.gtdb/bin_contig/*.fa > 05.abricate/bin.list 
 perl bin/run_abricate.pl -abricate -sl ./05.abricate/bin.list -db resfinder_new -o 05.abricate
 cd 05.abricate/resfinder_new/
-sh summary.sh
+sh bin/summary.sh
 sed -i s'/\.fa//'g summary.tab 
 ```
 
