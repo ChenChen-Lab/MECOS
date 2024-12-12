@@ -7,8 +7,9 @@ Software：SOAPfilter_v2.2, bowtie2
 Directory: 01.QC  
 Input: sample.list  
 Output: fq.list
-## sh step1.sh  
-
+```{sh}
+sh step1.sh  
+```
 ## Step2: Reads data were assembled to obtain contig 
 Software：fastq_pair, cutadapt, metaspades, bwa, samtools, athena-meta  
 Directory: 02.Assembly  
