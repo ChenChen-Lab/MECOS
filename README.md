@@ -5,11 +5,17 @@
 ## Step1: Processing of raw reads data: de-splice and de-host (human/mouse) -derived DNA 
 Software：SOAPfilter_v2.2, bowtie2  
 Directory: 01.QC  
-Input: sample.list  
+Input: test.list  
 Output: fq.list
 ```{sh}
 sh step1.sh  
 ```
+or
+```{sh}
+perl bin/reads_QC.pl  -F CTGTCTCTTATACACATCTTAGGAAGACAAGCACTGACGACATGA -R TCTGCTGAGTCGAGAACGTCTCTGTGAGCCAAGGAGTTGCTCTGG  -bl /datapool/bioinfo/guchaoyang/pipeline/stLFR/bin/barcode_list.txt  -sl test.list -host human -o  
+```
+
+
 ## Step2: Reads data were assembled to obtain contig 
 Software：fastq_pair, cutadapt, metaspades, bwa, samtools, athena-meta  
 Directory: 02.Assembly  
