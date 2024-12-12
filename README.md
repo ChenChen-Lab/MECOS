@@ -36,3 +36,5 @@ Directory: 06.result
 Input: 04.gtdb/classify/gtdbtk.bac120.summary.tsv; 05.abricate/resfinder_new/summary.tab  
 Output: combine_result.txt  
 
+## Reference  
+Han K, Li J, Yang D, Zhuang Q, Zeng H, Rong C, Yue J, Li N, Gu C, Chen L, Chen C. Detecting horizontal gene transfer with metagenomics co-barcoding sequencing. Microbiol Spectr. 2024 Mar 5;12(3):e0360223. doi: 10.1128/spectrum.03602-23. Epub 2024 Feb 5. PMID: 38315121; PMCID: PMC10913427.
