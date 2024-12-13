@@ -12,7 +12,7 @@ sh step1.sh
 ```
 or
 ```{sh}
-perl bin/reads_QC.pl  -F CTGTCTCTTATACACATCTTAGGAAGACAAGCACTGACGACATGA -R TCTGCTGAGTCGAGAACGTCTCTGTGAGCCAAGGAGTTGCTCTGG  -bl barcode_list.txt  -sl test.list -host human -o  
+perl bin/reads_QC.pl  -F CTGTCTCTTATACACATCTTAGGAAGACAAGCACTGACGACATGA -R TCTGCTGAGTCGAGAACGTCTCTGTGAGCCAAGGAGTTGCTCTGG  -bl bin/barcode_list.txt  -sl test.list -host human -o  
 ```
 
 
