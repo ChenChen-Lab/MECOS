@@ -62,6 +62,7 @@ sh bin/gtdbtk.sh &
 ```
 
 ## Step5: Antimicrobial resistance (AMR) genes analysis on MAGs
+Database: resfinder_new, 3148 sequences -  May 12, 2022; article: doi:10.1093/jac/dks261
 Software：abricate  
 Directory: 05.abricate  
 Input: bin.list (04.gtdb/bin_contig/*.fa)  
