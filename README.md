@@ -1,6 +1,16 @@
-# Identifying Multidrug-Resistant Bacteria through Metagenomic Co-barcode Sequencing (MECOS) Analysis  
+# Multidrug-Resistant Bacteria Identification through Metagenomic Co-barcode Sequencing (MECOS) Analysis  
 
 ##
+The Multidrug-Resistant Bacteria Identification through Metagenomic Co-barcode Sequencing (MECOS) Analysis system was mainly developed based on the clinical detection needs of multi-drug resistant bacteria. It is a standardized genetic analysis solution specifically for the data analysis, management, and statistics of clinical multi-drug resistant bacteria genome sequencing.
+
+It is mainly used for the management of data from Metagenomic Co-barcode Sequencing sequencing samples (MECOS), as well as the analysis of biological data. Based on an integrated hardware and software model, it combines professional pathogenic microorganism processes and data management functions, supporting the completion of clinical sample sequencing data quality control, metagenomic data assembly and splicing, pathogenic species identification and typing, and annotation of drug resistance and virulence genes from the original sequencing data.
+
+Through the specific application of long fragment single molecule metagenomic technology in clinical testing, it can achieve rapid discovery, accurate identification, and precise traceability of clinical multi-drug resistant bacteria, which will greatly promote the monitoring, traceability, and early warning of clinical pathogenic microorganisms.
+
+Pre-install software: 
+SOAPfilter_v2.2, bowtie2, fastq_pair, cutadapt, metaspades, bwa, samtools, athena-meta, metabat2, checkm, gtdbtk-1.7.0, abricate  
+
+
   
 ## Step1: Processing of raw reads data: de-splice and de-host (human/mouse) -derived DNA 
 Software：SOAPfilter_v2.2, bowtie2  
